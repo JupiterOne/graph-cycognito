@@ -6,20 +6,18 @@ import {
 import { Entities } from '../constants';
 
 export function createAccountEntity(): Entity {
+  // TODO: maybe add name to .env and put it as a field here
   return createIntegrationEntity({
     entityData: {
       source: {
-        id: 'acme-unique-account-id',
-        name: 'Example Co. Acme Account',
+        id: 'cycognito-account',
+        name: 'CyCognito Account',
       },
       assign: {
-        _key: 'acme-unique-account-id',
+        _key: 'cycognito-account',
         _type: Entities.ACCOUNT._type,
         _class: Entities.ACCOUNT._class,
-        mfaEnabled: true,
-        // This is a custom property that is not a part of the data model class
-        // hierarchy. See: https://github.com/JupiterOne/data-model/blob/master/src/schemas/Account.json
-        manager: 'Manager Name',
+        name: 'CyCognito Account',
       },
     },
   });
