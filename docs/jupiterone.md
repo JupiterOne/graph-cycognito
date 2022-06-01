@@ -96,21 +96,38 @@ https://github.com/JupiterOne/sdk/blob/main/docs/integrations/development.md
 
 The following entities are created:
 
-| Resources | Entity `_type` | Entity `_class` |
-| --------- | -------------- | --------------- |
-| Account   | `acme_account` | `Account`       |
-| User      | `acme_user`    | `User`          |
-| UserGroup | `acme_group`   | `UserGroup`     |
+| Resources   | Entity `_type`                | Entity `_class`       |
+| ----------- | ----------------------------- | --------------------- |
+| Account     | `cycognito_account`           | `Account`             |
+| Certificate | `cycognito_asset_certificate` | `Certificate`         |
+| Domain      | `cycognito_asset_domain`      | `Domain`              |
+| IP          | `cycognito_asset_ip`          | `IpAddress`           |
+| IP Range    | `cycognito_asset_ip_range`    |                       |
+| Issue       | `cycognito_issue`             | `Finding`             |
+| Web App     | `cycognito_asset_web_app`     | `ApplicationEndpoint` |
 
 ### Relationships
 
 The following relationships are created:
 
-| Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
-| --------------------- | --------------------- | --------------------- |
-| `acme_account`        | **HAS**               | `acme_group`          |
-| `acme_account`        | **HAS**               | `acme_user`           |
-| `acme_group`          | **HAS**               | `acme_user`           |
+| Source Entity `_type`         | Relationship `_class` | Target Entity `_type`         |
+| ----------------------------- | --------------------- | ----------------------------- |
+| `cycognito_account`           | **HAS**               | `cycognito_asset_certificate` |
+| `cycognito_account`           | **HAS**               | `cycognito_asset_domain`      |
+| `cycognito_account`           | **HAS**               | `cycognito_asset_ip`          |
+| `cycognito_account`           | **HAS**               | `cycognito_asset_ip_range`    |
+| `cycognito_account`           | **HAS**               | `cycognito_asset_web_app`     |
+| `cycognito_account`           | **HAS**               | `cycognito_issue`             |
+| `cycognito_asset_certificate` | **HAS**               | `cycognito_asset_domain`      |
+| `cycognito_asset_certificate` | **HAS**               | `cycognito_asset_ip`          |
+| `cycognito_asset_certificate` | **HAS**               | `cycognito_issue`             |
+| `cycognito_asset_domain`      | **CONTAINS**          | `cycognito_asset_domain`      |
+| `cycognito_asset_domain`      | **HAS**               | `cycognito_asset_ip`          |
+| `cycognito_asset_domain`      | **HAS**               | `cycognito_issue`             |
+| `cycognito_asset_ip`          | **HAS**               | `cycognito_asset_domain`      |
+| `cycognito_asset_ip`          | **HAS**               | `cycognito_issue`             |
+| `cycognito_asset_ip_range`    | **HAS**               | `cycognito_issue`             |
+| `cycognito_asset_web_app`     | **HAS**               | `cycognito_issue`             |
 
 <!--
 ********************************************************************************
