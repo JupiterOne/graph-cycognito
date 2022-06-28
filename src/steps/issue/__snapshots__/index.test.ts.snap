@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetch-issues 1`] = `
+Array [
+  "cycognito_account",
+  "cycognito_issue",
+  "cycognito_account_has_issue",
+  "cycognito_issue_is_cve",
+  "cycognito_issue_is_cyc",
+]
+`;

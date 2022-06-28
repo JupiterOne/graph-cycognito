@@ -12,7 +12,7 @@ export const accountSpec: StepSpec<IntegrationConfig>[] = [
     entities: [
       {
         resourceName: 'Account',
-        _type: 'acme_account',
+        _type: 'cycognito_account',
         _class: ['Account'],
       },
     ],
