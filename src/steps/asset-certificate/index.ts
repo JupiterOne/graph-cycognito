@@ -53,7 +53,7 @@ export async function buildCertificateHasIpRelationship({
     { _type: Entities.ASSET_CERTIFICATE._type },
     async (certificateEntity) => {
       const { ipNames } = certificateEntity;
-      for (const ipAddress of ipNames as string[]) {
+      for (const ipAddress of (ipNames as string[]) || []) {
         const id = generateIpIdFromAddress(ipAddress);
         const ipEntity = await jobState.findEntity(id);
         if (ipEntity) {
