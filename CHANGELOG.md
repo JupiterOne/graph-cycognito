@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.0.1 - 2022-07-08
+
 ### Changed
 
 - Modified domain and certificate assets logic in case ipNames property is
