@@ -48,7 +48,7 @@ export async function buildDomainHasIpRelationship({
     { _type: Entities.ASSET_DOMAIN._type },
     async (domainEntity) => {
       const { ipNames } = domainEntity;
-      for (const ipAddress of ipNames as string[]) {
+      for (const ipAddress of (ipNames as string[]) || []) {
         const id = generateIpIdFromAddress(ipAddress);
         const ipEntity = await jobState.findEntity(id);
         if (ipEntity) {
