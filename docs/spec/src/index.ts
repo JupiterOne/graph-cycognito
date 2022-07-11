@@ -6,7 +6,7 @@ import { ipSpec } from './asset-ip';
 import { domainSpec } from './asset-domain';
 import { certificateSpec } from './asset-certificate';
 import { webAppSpec } from './asset-web-app';
-import { ipRangeSpec } from './asset-ip-range';
+// import { ipRangeSpec } from './asset-ip-range';
 import { issueSpec } from './issue';
 
 export const invocationConfig: IntegrationSpecConfig<IntegrationConfig> = {
@@ -16,7 +16,7 @@ export const invocationConfig: IntegrationSpecConfig<IntegrationConfig> = {
     ...domainSpec,
     ...certificateSpec,
     ...webAppSpec,
-    ...ipRangeSpec,
+    // ...ipRangeSpec,
     ...issueSpec,
   ],
 };
