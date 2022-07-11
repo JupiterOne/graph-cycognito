@@ -4,7 +4,7 @@ import { ipAssetSteps } from './asset-ip';
 import { domainAssetSteps } from './asset-domain';
 import { certificateAssetSteps } from './asset-certificate';
 import { webAppAssetSteps } from './asset-web-app';
-import { IpRangeAssetSteps } from './asset-ip-range';
+// import { IpRangeAssetSteps } from './asset-ip-range';
 
 const integrationSteps = [
   ...accountSteps,
@@ -13,7 +13,7 @@ const integrationSteps = [
   ...domainAssetSteps,
   ...certificateAssetSteps,
   ...webAppAssetSteps,
-  ...IpRangeAssetSteps,
+  // ...IpRangeAssetSteps,
 ];
 
 export { integrationSteps };

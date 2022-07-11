@@ -80,7 +80,6 @@ The following entities are created:
 | Certificate | `cycognito_asset_certificate` | `Certificate`         |
 | Domain      | `cycognito_asset_domain`      | `Domain`              |
 | IP          | `cycognito_asset_ip`          | `IpAddress`           |
-| IP Range    | `cycognito_asset_ip_range`    | `Network`             |
 | Issue       | `cycognito_issue`             | `Finding`             |
 | Web App     | `cycognito_asset_web_app`     | `ApplicationEndpoint` |
 
@@ -93,7 +92,6 @@ The following relationships are created:
 | `cycognito_account`           | **HAS**               | `cycognito_asset_certificate` |
 | `cycognito_account`           | **HAS**               | `cycognito_asset_domain`      |
 | `cycognito_account`           | **HAS**               | `cycognito_asset_ip`          |
-| `cycognito_account`           | **HAS**               | `cycognito_asset_ip_range`    |
 | `cycognito_account`           | **HAS**               | `cycognito_asset_web_app`     |
 | `cycognito_account`           | **HAS**               | `cycognito_issue`             |
 | `cycognito_asset_certificate` | **HAS**               | `cycognito_asset_domain`      |
