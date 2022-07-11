@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.0.2 - 2022-07-11
+
 ### Changed
 
 - Temporary disabled/commented out "IP Range Assets" step until it's fixed on
