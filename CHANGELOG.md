@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Changed
+
+- Changed how Certificate and IP assets domain names are collected. The endpoint
+  is no longer returning them under the field of `domain_names` but instead
+  under `domains`.
+
 ## 1.0.2 - 2022-07-11
 
 ### Changed
