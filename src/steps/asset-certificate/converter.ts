@@ -21,7 +21,7 @@ export function createCertificateAssetEntity(asset: Certificate): Entity {
         _class: Entities.ASSET_CERTIFICATE._class,
         ...parseCommonAssetProperties(asset),
         name: asset.id,
-        domainNames: asset.domain_names,
+        domainNames: asset.domains,
         ipNames: asset.ip_names,
         locations: asset.locations,
         // Stats

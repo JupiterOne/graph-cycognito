@@ -26,7 +26,7 @@ export function createIpAssetEntity(asset: Ip): Entity {
         ipAddress: asset.ip,
         name: asset.ip,
         alive: asset.alive,
-        domainNames: asset.domain_names,
+        domainNames: asset.domains,
         locations: asset.locations.filter((loc) => loc !== null),
         'openPorts.portNumbers': asset.open_ports.map((p) => p.port),
         'openPorts.protocols': asset.open_ports.map((p) => p.protocol),
