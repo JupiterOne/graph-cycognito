@@ -49,7 +49,7 @@ export interface Asset {
 
 export interface Ip extends Asset {
   alive: boolean;
-  domain_names: string[];
+  domains: string[];
   ip: string;
   from_rotating: string;
   open_ports: Port[];
@@ -67,7 +67,7 @@ export interface Domain extends Asset {
 
 export interface Certificate extends Asset {
   subject_alt_names: string[];
-  domain_names: string[];
+  domains: string[];
   creation_time: string | null;
   ip_names: string[];
   subject_organization: string;
@@ -78,7 +78,6 @@ export interface Certificate extends Asset {
   issuer_locality: string;
   subject_organization_unit: string;
   issuer_alt_names: string[];
-  domains: string[];
   signature_algorithm: string;
   subject_locality: string;
   issuer_organization_unit: string;
