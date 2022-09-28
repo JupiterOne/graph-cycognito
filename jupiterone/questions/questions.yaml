@@ -8,12 +8,12 @@ questions:
     queries:
       - name: informative
         query: |
-          FIND cycognito_issue with detectionComplexity ^= "Password" AND affectedAsset ~= "webapp" AS pw
+          FIND cycognito_issue WITH detectionComplexity ^= "Password" AND affectedAsset ~= "webapp" AS pw
           RETURN 
-            pw.name, pw.issueStatus,
-            pw.exploitationMethod, pw.exploitationScore,
-            pw.firstDetected, pw.lastDetected,
-            pw.investigationStatus,pw.numericSeverity
+          pw.name, pw.issueStatus,
+          pw.exploitationMethod, pw.exploitationScore,
+          pw.firstDetected, pw.lastDetected,
+          pw.investigationStatus,pw.numericSeverity
     tags:
       - cycognito
       - issues
