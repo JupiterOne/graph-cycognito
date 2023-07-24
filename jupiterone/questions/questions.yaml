@@ -1,15 +1,19 @@
 ---
-sourceId: managed:template
+sourceId: managed:cycognito
 integrationDefinitionId: '${integration_definition_id}'
-questions: []
-  # - id: integration-question-template-replace-me
-  #   title: What kinds of questions will this integration support?
-  #   description:
-  #     TODO Every integration should contribute questions! Please be carefule
-  #     to replace this before deploying the integration to JupiterOne.
-  #   queries:
-  #     - name: good
-  #       query: |
-  #         find * with _integrationDefinitionId = '${integration_definition_id}'
-  #   tags:
-  #     - template
+questions: 
+  - id: managed-question-cycognito-issues-with-webapp-password-exploits
+    title: Which Cycognito issues contain Web Application detected passwords?
+    description: Returns a list of Cycognito issues consisting of Web Application detected passwords.
+    queries:
+      - name: informative
+        query: |
+          FIND cycognito_issue WITH detectionComplexity ^= "Password" AND affectedAsset ~= "webapp" AS pw
+          RETURN 
+          pw.name, pw.issueStatus,
+          pw.exploitationMethod, pw.exploitationScore,
+          pw.firstDetected, pw.lastDetected,
+          pw.investigationStatus,pw.numericSeverity
+    tags:
+      - cycognito
+      - issues
